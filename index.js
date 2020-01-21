@@ -1,5 +1,4 @@
 import React from 'react'
-//import { View, WebView } from 'react-native'
 import { View } from 'react-native'
 import AutoHeightWebView from 'react-native-autoheight-webview'
 
@@ -20,15 +19,6 @@ const defaultOptions = {
 class MathJax extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			height: 1
-		};
-	}
-
-	handleMessage(message) {
-		this.setState({
-			height: Number(message.nativeEvent.data)
-		});
 	}
 
 	wrapMathjax(content) {
@@ -40,7 +30,6 @@ class MathJax extends React.Component {
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 			<script type="text/x-mathjax-config">
 				MathJax.Hub.Config(${options});
-
 				MathJax.Hub.Queue(function() {
 					var height = document.documentElement.scrollHeight;
 					window.postMessage(String(height));
@@ -61,10 +50,9 @@ class MathJax extends React.Component {
 		const props = Object.assign({}, this.props, { html: undefined });
 
 		return (
-			<View style={{ height: this.state.height, ...props.style }}>
+			<View>
 				<AutoHeightWebView
 					scrollEnabled={false}
-					onMessage={this.handleMessage.bind(this)}
 					source={{ html }}
 					{...props}
 				/>
