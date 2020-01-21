@@ -1,11 +1,17 @@
 # react-native-mathjax
 Render Mathjax content in React Native Webview with auto height adjustment.
 
+Added react-native-autoheight-webview to replace webview
+
 # Showcase
 TODO
 
 # Installation
-1. `yarn add react-native-mathjax` or `npm install react-native-mathjax --save`
+1. `yarn add https://github.com/christtian-crispim/react-native-mathjax.git` or `npm install christtian-crispim/react-native-mathjax#master --save`
+
+yarn add https://github.com/christtian-crispim/react-native-katex.git
+npm install christtian-crispim/react-native-af-video-player#master
+
 
 # Usage
 ```javascript

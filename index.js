@@ -1,5 +1,7 @@
-import React from 'react';
-import { View, WebView } from 'react-native';
+import React from 'react'
+//import { View, WebView } from 'react-native'
+import { View } from 'react-native'
+import AutoHeightWebView from 'react-native-autoheight-webview'
 
 const defaultOptions = {
 	messageStyle: 'none',
@@ -60,7 +62,7 @@ class MathJax extends React.Component {
 
 		return (
 			<View style={{ height: this.state.height, ...props.style }}>
-				<WebView
+				<AutoHeightWebView
 					scrollEnabled={false}
 					onMessage={this.handleMessage.bind(this)}
 					source={{ html }}
