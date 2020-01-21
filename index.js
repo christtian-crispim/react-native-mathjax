@@ -19,6 +19,15 @@ const defaultOptions = {
 class MathJax extends React.Component {
 	constructor(props) {
 		super(props);
+		// this.state = {
+		// 	height: 1
+		// };
+	}
+
+	handleMessage(message) {
+		// this.setState({
+		// 	height: Number(message.nativeEvent.data)
+		// });
 	}
 
 	wrapMathjax(content) {
@@ -31,8 +40,8 @@ class MathJax extends React.Component {
 			<script type="text/x-mathjax-config">
 				MathJax.Hub.Config(${options});
 				MathJax.Hub.Queue(function() {
-					var height = document.documentElement.scrollHeight;
-					window.postMessage(String(height));
+					// var height = document.documentElement.scrollHeight;
+					// window.postMessage(String(height));
 					document.getElementById("formula").style.visibility = '';
 				});
 			</script>
@@ -50,9 +59,11 @@ class MathJax extends React.Component {
 		const props = Object.assign({}, this.props, { html: undefined });
 
 		return (
+			// <View style={{ height: this.state.height, ...props.style }}>
 			<View>
 				<AutoHeightWebView
 					scrollEnabled={false}
+					// onMessage={this.handleMessage.bind(this)}
 					source={{ html }}
 					{...props}
 				/>
