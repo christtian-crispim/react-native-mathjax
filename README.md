@@ -7,10 +7,9 @@ Added react-native-autoheight-webview to replace webview
 TODO
 
 # Installation
-1. `yarn add https://github.com/christtian-crispim/react-native-mathjax.git` or `npm install christtian-crispim/react-native-mathjax#master --save`
-
-yarn add https://github.com/christtian-crispim/react-native-katex.git
-npm install christtian-crispim/react-native-af-video-player#master
+`yarn add https://github.com/christtian-crispim/react-native-mathjax.git` 
+or 
+`npm install christtian-crispim/react-native-mathjax#master --save`
 
 
 # Usage
