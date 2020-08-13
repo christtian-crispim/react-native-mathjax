@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/calvinkei/react-native-mathjax#readme",
   "dependencies": {
-    "react-native-autoheight-webview": "^1.4.1"
+    "react-native-autoheight-webview": "^1.5.2"
   }
 }
